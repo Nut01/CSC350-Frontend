@@ -97,7 +97,7 @@ export default function ResponsiveAppBar() {
                 ) : user.role === 1 ? (
                   [
                     <Typography sx={{ margin: 2, textDecoration: "none" }}>
-                      คะแนนสะสม : { data.point }
+                      คะแนนสะสม : { data.point ? data.point : 0 }
                     </Typography>,
                     <Button onClick={handleClick}>
                       <Avatar src="https://cdn.pixabay.com/photo/2022/09/30/12/56/cat-7489398_960_720.jpg" />
