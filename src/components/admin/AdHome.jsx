@@ -173,6 +173,10 @@ function ProductCard({ item, prdType }) {
     }
   };
 
+  const handleUpload = (newImage, info) => {
+    setImage(newImage);
+  };
+
   return (
     <>
       <Grid item xs={3} key={item.id}>
@@ -290,9 +294,7 @@ function ProductCard({ item, prdType }) {
             <MuiFileInput
               placeholder="เลือกรูปภาพสินค้า"
               value={image}
-              onChange={(e) => {
-                setImage(e.target.files[0]);
-              }}
+              onChange={handleUpload}
             />
             <FormControl variant="outlined" fullWidth>
               <OutlinedInput
@@ -381,9 +383,7 @@ function ProductCard({ item, prdType }) {
             <MuiFileInput
               placeholder="เลือกรูปภาพสินค้า"
               value={image}
-              onChange={(e) => {
-                setImage(e.target.files[0]);
-              }}
+              onChange={handleUpload}
             />
             <FormControl variant="outlined" fullWidth>
               <OutlinedInput
