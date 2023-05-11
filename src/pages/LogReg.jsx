@@ -58,7 +58,7 @@ export default function LogReg() {
       const res = await useAxios.post("/user", formData);
       // console.log("ResData", res.data);
       alert("สมัครสมาชิกสำเร็จ");
-      navigate(0);
+      window.location.reload();;
     } catch (e) {
       if (isAxiosError(e)) {
         const status = e.response.status;

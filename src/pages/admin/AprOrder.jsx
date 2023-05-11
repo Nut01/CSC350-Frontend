@@ -68,7 +68,7 @@ export default function ApproveOrder() {
         tracking_number: prdTrack,
       });
       alert("อัพเดทเลขพัสดุเรียบร้อย");
-      Navigate(0);
+      window.location.reload();;
       console.log("update", res.data);
     } catch (e) {
       console.log(e);
@@ -81,7 +81,7 @@ export default function ApproveOrder() {
         tracking_number: giftTrack,
       });
       alert("อัพเดทเลขพัสดุเรียบร้อย");
-      Navigate(0);
+      window.location.reload();;
       console.log(res.data);
     } catch (e) {
       console.log(e);

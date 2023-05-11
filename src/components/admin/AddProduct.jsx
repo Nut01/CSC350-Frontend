@@ -52,7 +52,7 @@ export default function AddProduct() {
         const res = await useAxios.post("/product", formData);
         console.log(res.data);
         alert("เพิ่มสินค้าสำเร็จ");
-        Navigate(0);
+        window.location.reload();;
       } else if (type === 2) {
         formData.append("name", name);
         formData.append("description", description);
@@ -61,7 +61,7 @@ export default function AddProduct() {
         const res = await useAxios.post("/gift", formData);
         console.log(res.data);
         alert("เพิ่มสินค้าสำเร็จ");
-        Navigate(0);
+        window.location.reload();;
       } else alert("กรุณากรอกข้อมูลให้ครบถ้วน");
     } catch (e) {
       if (axios.isAxiosError(e)) {

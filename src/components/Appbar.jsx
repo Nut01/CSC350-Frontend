@@ -48,7 +48,7 @@ export default function ResponsiveAppBar() {
     localStorage.removeItem("user");
     alert("ออกจากระบบสำเร็จ");
     Navigate(`/`)
-    Navigate(0);
+    window.location.reload();;
   };
 
   return (
