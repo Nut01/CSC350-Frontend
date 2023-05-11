@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios/axios.js';
 
 const baseUrl = "https://rich-rose-lizard-suit.cyclic.app";
 
