@@ -76,7 +76,7 @@ export default function ApproveMember() {
         role: 1,
       });
       alert("อนุมัติการสมัครสมาชิกเรียบร้อย");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }
@@ -86,7 +86,7 @@ export default function ApproveMember() {
     try {
       const res = await useAxios.delete(`/user/${username}`);
       alert("ปฏิเสธการสมัครสมาชิกเรียบร้อย");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }

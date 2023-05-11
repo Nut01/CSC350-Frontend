@@ -138,7 +138,7 @@ function ProductCard({ item, prdType }) {
       });
       console.log(res.data);
       alert("แลกของขวัญสำเร็จ");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }

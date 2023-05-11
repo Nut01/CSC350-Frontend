@@ -117,7 +117,7 @@ function ProductCard({ item, prdType }) {
       const res = await useAxios.delete(`/product/${id}`);
       console.log(res);
       alert("ลบสินค้าเรียบร้อย");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }
@@ -129,7 +129,7 @@ function ProductCard({ item, prdType }) {
       const res = await useAxios.delete(`/gift/${id}`);
       console.log(res);
       alert("ลบของขวัญเรียบร้อย");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }
@@ -151,7 +151,7 @@ function ProductCard({ item, prdType }) {
       const res = await useAxios.put(`/product/${id}`, formData);
       console.log(res);
       alert("แก้ไขสินค้าเรียบร้อย");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }
@@ -167,7 +167,7 @@ function ProductCard({ item, prdType }) {
       const res = await useAxios.put(`/gift/${id}`, formData);
       console.log(res);
       alert("แก้ไขของขวัญเรียบร้อย");
-      window.location.reload();;
+      navigate(0);
     } catch (e) {
       console.log(e);
     }
