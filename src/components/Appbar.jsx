@@ -18,7 +18,7 @@ export default function ResponsiveAppBar() {
 
   const user = JSON.parse(localStorage.getItem("user"));
   const username = user?.username;
-  const [data, setData] = React.useState([]);
+  const [data, setData] = React.useState(null);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const OpenMenu = Boolean(anchorEl);
@@ -97,7 +97,7 @@ export default function ResponsiveAppBar() {
                 ) : user.role === 1 ? (
                   [
                     <Typography sx={{ margin: 2, textDecoration: "none" }}>
-                      คะแนนสะสม : { data.point ? data.point : 0 }
+                      คะแนนสะสม : { data != null ? data.point : 0 }
                     </Typography>,
                     <Button onClick={handleClick}>
                       <Avatar src="https://cdn.pixabay.com/photo/2022/09/30/12/56/cat-7489398_960_720.jpg" />
