@@ -7,7 +7,7 @@ import {
   Button,
   Divider,
 } from "@mui/material";
-import axios from "axios";
+import {isAxiosError} from "axios";
 import useAxios from "../lib/useAxios";
 import { useNavigate } from "react-router-dom";
 
@@ -36,7 +36,7 @@ export default function LogReg() {
       // console.log(res.data);
       navigate("/");
     } catch (e) {
-      if (axios.isAxiosError(e)) {
+      if (isAxiosError(e)) {
         const status = e.response.status;
         if (status === 401) {
           alert("กรุณากรอกข้อมูลให้ครบถ้วน");
@@ -60,7 +60,7 @@ export default function LogReg() {
       alert("สมัครสมาชิกสำเร็จ");
       navigate(0);
     } catch (e) {
-      if (axios.isAxiosError(e)) {
+      if (isAxiosError(e)) {
         const status = e.response.status;
         if (status === 400) {
           alert("กรุณากรอกข้อมูลให้ครบถ้วน");
