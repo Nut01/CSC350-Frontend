@@ -7,7 +7,7 @@ import {
   Button,
   Divider,
 } from "@mui/material";
-import {isAxiosError} from "axios";
+import {isAxiosError} from 'https://cdn.jsdelivr.net/npm/axios@1.4.0/+esm'
 import useAxios from "../lib/useAxios";
 import { useNavigate } from "react-router-dom";
 
