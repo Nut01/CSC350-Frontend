@@ -8,7 +8,9 @@ export default defineConfig({
     rollupOptions: {
       external: ['axios'],
       output: {
-
+        globals: {
+          axios: 'axios'
+        }
       }
     }
   }
